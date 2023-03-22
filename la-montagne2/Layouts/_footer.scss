@@ -1,0 +1,105 @@
+footer {
+  background: rgb(245, 245, 245);
+  display: grid;
+  grid-template-columns: 50% 50%;
+  max-width: 85%;
+  margin: 30px auto 50px;
+  @media screen and (max-width: 950px) {
+    display: block;
+  }
+
+  form {
+    @include title;
+    text-align: left;
+    display: grid;
+    font-weight: 400;
+    font-size: 0.7rem;
+    color: $dark-grey;
+    padding: 50px;
+    border-right: 1px solid $light-grey;
+    @media screen and (max-width: 400px) {
+      padding: 20px;
+    }
+    input {
+      padding: 10px 0;
+    }
+    input,
+    textarea {
+      background: none;
+      outline: none;
+      border-radius: 5px;
+      border: 1px solid $light-grey;
+      resize: none;
+      margin: 20px 0;
+      font-family: $font2;
+      color: $dark-grey;
+      padding: 10px;
+    }
+
+    button {
+      max-width: 50%;
+      margin-top: 30px;
+      border-color: $dark-grey;
+      font-size: 0.7rem;
+      color: $dark-grey;
+    }
+  }
+  .contact-container {
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    align-items: center;
+    min-height: 600px;
+    @media screen and (max-width: 950px) {
+      border-top: 1px solid $light-grey;
+    }
+
+    .contact {
+      display: grid;
+      grid-template-columns: 30% 60%;
+      padding: 0 50px;
+      height: 100%;
+      align-items: center;
+      border-bottom: 1px solid $light-grey;
+      @media screen and (max-width: 600px) {
+        grid-template-columns: 40% 60%;
+        padding: 0 20px;
+      }
+
+      h5 {
+        @include title;
+        font-weight: 400;
+        font-size: 0.7rem;
+        color: $dark-grey;
+      }
+      p {
+        color: $dark-grey;
+        font-family: $font2;
+        font-size: 0.8rem;
+      }
+      .icons-footer {
+        display: flex;
+        justify-content: space-between;
+        width: 80%;
+        @media screen and (max-width: 540px) {
+        }
+
+        i {
+          border: 1px solid $dark-grey;
+          border-radius: 50px;
+          padding: 10px;
+          @media screen and (max-width: 540px) {
+            font-size: 0.6rem;
+          }
+
+          &:hover {
+            color: $white;
+            background: $dark-grey;
+            border-color: $dark-grey;
+            cursor: pointer;
+            box-shadow: 0px 0px 2px 0px #cacaca;
+          }
+        }
+      }
+    }
+  }
+}
